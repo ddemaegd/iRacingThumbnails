@@ -1,0 +1,15 @@
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\bin\Debug\netcoreapp3.1\iRacingPaintGraphic.exe
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\bin\Debug\netcoreapp3.1\iRacingPaintGraphic.deps.json
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\bin\Debug\netcoreapp3.1\iRacingPaintGraphic.runtimeconfig.json
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\bin\Debug\netcoreapp3.1\iRacingPaintGraphic.runtimeconfig.dev.json
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\bin\Debug\netcoreapp3.1\iRacingPaintGraphic.dll
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\bin\Debug\netcoreapp3.1\iRacingPaintGraphic.pdb
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\obj\Debug\netcoreapp3.1\iRacingPaintGraphic.csprojAssemblyReference.cache
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\obj\Debug\netcoreapp3.1\iRacingPaintGraphic.Form1.resources
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\obj\Debug\netcoreapp3.1\iRacingPaintGraphic.csproj.GenerateResource.cache
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\obj\Debug\netcoreapp3.1\iRacingPaintGraphic.AssemblyInfoInputs.cache
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\obj\Debug\netcoreapp3.1\iRacingPaintGraphic.AssemblyInfo.cs
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\obj\Debug\netcoreapp3.1\iRacingPaintGraphic.csproj.CoreCompileInputs.cache
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\obj\Debug\netcoreapp3.1\iRacingPaintGraphic.dll
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\obj\Debug\netcoreapp3.1\iRacingPaintGraphic.pdb
+C:\Users\ddema\source\repos\iRacingPaintGraphic\iRacingPaintGraphic\obj\Debug\netcoreapp3.1\iRacingPaintGraphic.genruntimeconfig.cache
