@@ -1,8 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "ai/lxWuXOwwQtFT67moTGeY/voryQwJKamns0egdQv8UI+KjIUwrWGtqmqsW4Dm9tsMdluDGtFvV4LqNgrpwbg==",
+  "dgSpecHash": "WiFmDExSJJFsNj4b1BAkg8+eWmr/4/wtgLWGXxoREGg05QlPxObxrWxgwlvuJbP7kKnYDqdQBckjeFbmEQVABg==",
   "success": true,
-  "projectFilePath": "D:\\Git\\GitRepos\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "D:\\Git\\GitRepos\\iRacingThumbnails\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ddema\\.nuget\\packages\\iracingsdk\\1.0.0.43\\iracingsdk.1.0.0.43.nupkg.sha512",
+    "C:\\Users\\ddema\\.nuget\\packages\\yamldotnet\\11.2.1\\yamldotnet.11.2.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'iRacingSDK 1.0.0.43' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "iRacingSDK",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

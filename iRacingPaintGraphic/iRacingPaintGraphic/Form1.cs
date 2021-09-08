@@ -7,8 +7,10 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iRacingSDK;
 
 namespace iRacingPaintGraphic
 {
@@ -20,7 +22,7 @@ namespace iRacingPaintGraphic
 
             Dictionary<String, string> carList = new Dictionary<string, string>();
 
-            
+
             carList.Add("ARCA Menards Chevrolet Impala", "stockcars2 chevy");
             carList.Add("Aston Martin DBR9 GT1", "astonmartin dbr9");
             carList.Add("Audi 90 GTO", "audi90gto");
@@ -139,8 +141,38 @@ namespace iRacingPaintGraphic
             CarDropDown.DisplayMember = "Key";
             CarDropDown.ValueMember = "Value";
 
-            
 
+        }
+
+        private static void VerifyDataStream()
+        {
+            var lastTickCount = 0;
+            var lastFrame = 0;
+
+            var firstData = iRacing.GetDataFeed().First();
+            var offset = firstData.Telemetry.SessionTime - (float)firstData.Telemetry.ReplayFrameNum / 60f;
+
+            foreach (var data in iRacing.GetDataFeed())
+            {
+                if (data.Telemetry.TickCount != lastTickCount + 1)
+                {
+                    Console.WriteLine("Tick count glitch {0}, {1}", lastTickCount, data.Telemetry.TickCount);
+                }
+
+                if (data.Telemetry.ReplayFrameNum != lastFrame + 1)
+                {
+                    Console.WriteLine("Frame number count glitch {0}, {1}", lastFrame, data.Telemetry.ReplayFrameNum);
+                }
+
+                var newTimeDelta = (int)((float)data.Telemetry.ReplayFrameNum / 60f + offset - data.Telemetry.SessionTime) * 1000;
+
+                if (newTimeDelta != 0)
+                    Console.WriteLine("Frame time {0}", newTimeDelta);
+
+                Thread.Sleep(13);
+                lastTickCount = data.Telemetry.TickCount;
+                lastFrame = data.Telemetry.ReplayFrameNum;
+            }
         }
 
         private void RunButton_Click(object sender, EventArgs e)
@@ -149,18 +181,39 @@ namespace iRacingPaintGraphic
             lblMessage.Text = "Running...";
             Random random = new Random();
 
-
-
-
             string filepath = PaintFileTextBox.Text + @"\" +  CarDropDown.SelectedValue;
             DirectoryInfo d = new DirectoryInfo(filepath);
 
             string saveLocation = SaveFileTextBox.Text + @"\" + CarDropDown.SelectedItem + @"\" + random.Next(1, 1000) + @"\";
 
+
+            var iracing = new iRacingConnection();
+            var data = iracing.GetDataFeed().First();
+
+            var ieventRacing = new iRacingEvents();
+
+            ieventRacing.StartListening();
+
+            foreach (SessionData._DriverInfo._Drivers car in data.SessionData.DriverInfo.CompetingDrivers)
+            {
+                Console.WriteLine(car.CarNumber);
+            }
+
+            //TODO GET LIST OF DRIVERS THEN SORT BY CAR NUMBER OR NAME
+
             foreach (var file in d.GetFiles("*.tga"))
             {
+                string imageUrl = "";
+                if (iracing.IsConnected) {
 
-                string imageUrl = @"http://localhost:32034/pk_car.png?size=2&view=1&carPath=" + CarDropDown.SelectedValue + "&number=82&carCol=FFFFFF,000000,000000&carCustPaint=" + PaintFileTextBox.Text +  @"\" + CarDropDown.SelectedValue + @"\" + file.Name;
+                    //TODO get car number, rim color
+                    imageUrl = @"http://localhost:32034/pk_car.png?size=2&view=1&carPath=" + CarDropDown.SelectedValue + "&number=1&carCol=FFFFFF,000000,000000&carCustPaint=" + PaintFileTextBox.Text + @"\" + CarDropDown.SelectedValue + @"\" + file.Name;
+                }
+                else
+                {
+                    imageUrl = @"http://localhost:32034/pk_car.png?size=2&view=1&carPath=" + CarDropDown.SelectedValue + "&number=1&carCol=FFFFFF,000000,000000&carCustPaint=" + PaintFileTextBox.Text + @"\" + CarDropDown.SelectedValue + @"\" + file.Name;
+                }
+                
 
                 byte[] imageBytes;
                 HttpWebRequest imageRequest = (HttpWebRequest)WebRequest.Create(imageUrl);
@@ -190,6 +243,73 @@ namespace iRacingPaintGraphic
                     fs.Close();
                     bw.Close();
                 }
+            }
+
+            if (chkMerge.Checked)
+            {
+                // Get the picture files in the source directory.
+                List<string> files = new List<string>();
+                foreach (string filename in Directory.GetFiles(saveLocation))
+                {
+                    int pos = filename.LastIndexOf('.');
+                    string extension = filename.Substring(pos).ToLower();
+                    if ((extension == ".bmp") ||
+                        (extension == ".jpg") ||
+                        (extension == ".jpeg") ||
+                        (extension == ".png") ||
+                        (extension == ".tif") ||
+                        (extension == ".tiff") ||
+                        (extension == ".gif"))
+                        files.Add(filename);
+                }
+
+                int num_images = files.Count;
+
+                // Load the images.
+                Bitmap[] images = new Bitmap[files.Count];
+                for (int i = 0; i < num_images; i++)
+                    images[i] = new Bitmap(files[i]);
+
+                // Find the largest width and height.
+                int max_wid = 0;
+                int max_hgt = 0;
+                for (int i = 0; i < num_images; i++)
+                {
+                    if (max_wid < images[i].Width) max_wid = images[i].Width;
+                    if (max_hgt < images[i].Height) max_hgt = images[i].Height;
+                }
+
+                // Make the result bitmap.
+                int margin = 20;
+                int num_cols = 3;
+                int num_rows = (int)Math.Ceiling(num_images / (float)num_cols);
+                int wid = max_wid * num_cols + margin * (num_cols - 1);
+                int hgt = max_hgt * num_rows + margin * (num_rows - 1);
+                Bitmap bm = new Bitmap(wid, hgt);
+
+                // Place the images on it.
+                using (Graphics gr = Graphics.FromImage(bm))
+                {
+                    gr.Clear(Color.Transparent);
+
+
+                    //TODO PLACE NAME AND NUMBER UNDERNEATH CAR
+                    int x = 0;
+                    int y = 0;
+                    for (int i = 0; i < num_images; i++)
+                    {
+                        gr.DrawImage(images[i], x, y);
+                        x += max_wid + margin;
+                        if (x >= wid)
+                        {
+                            y += max_hgt + margin;
+                            x = 0;
+                        }
+                    }
+                }
+
+                // Save the result.
+                bm.Save(saveLocation + "MergedImage", System.Drawing.Imaging.ImageFormat.Png);
             }
 
             lblMessage.Text = "Done!";

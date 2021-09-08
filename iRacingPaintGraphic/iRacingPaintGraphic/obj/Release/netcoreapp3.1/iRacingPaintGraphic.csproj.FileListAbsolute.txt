@@ -1,0 +1,15 @@
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\bin\Release\netcoreapp3.1\iRacingPaintGraphic.exe
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\bin\Release\netcoreapp3.1\iRacingPaintGraphic.deps.json
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\bin\Release\netcoreapp3.1\iRacingPaintGraphic.runtimeconfig.json
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\bin\Release\netcoreapp3.1\iRacingPaintGraphic.runtimeconfig.dev.json
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\bin\Release\netcoreapp3.1\iRacingPaintGraphic.dll
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\bin\Release\netcoreapp3.1\iRacingPaintGraphic.pdb
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\obj\Release\netcoreapp3.1\iRacingPaintGraphic.Form1.resources
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\obj\Release\netcoreapp3.1\iRacingPaintGraphic.csproj.GenerateResource.cache
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\obj\Release\netcoreapp3.1\iRacingPaintGraphic.AssemblyInfoInputs.cache
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\obj\Release\netcoreapp3.1\iRacingPaintGraphic.AssemblyInfo.cs
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\obj\Release\netcoreapp3.1\iRacingPaintGraphic.csproj.CoreCompileInputs.cache
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\obj\Release\netcoreapp3.1\iRacingPaintGraphic.dll
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\obj\Release\netcoreapp3.1\iRacingPaintGraphic.pdb
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\obj\Release\netcoreapp3.1\iRacingPaintGraphic.genruntimeconfig.cache
+D:\Git\GitRepos\iRacingThumbnails\iRacingPaintGraphic\iRacingPaintGraphic\obj\Release\netcoreapp3.1\iRacingPaintGraphic.csprojAssemblyReference.cache

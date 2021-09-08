@@ -1,11 +1,75 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "iRacingSDK/1.0.0.43": {
+        "type": "package",
+        "dependencies": {
+          "YamlDotNet": "3.1.1"
+        },
+        "compile": {
+          "lib/net40-client/iRacingSDK.dll": {}
+        },
+        "runtime": {
+          "lib/net40-client/iRacingSDK.dll": {}
+        }
+      },
+      "YamlDotNet/11.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/YamlDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/YamlDotNet.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "iRacingSDK/1.0.0.43": {
+      "sha512": "GqLebHI8oX3r4KATY659U+XQ/qFGk5Lf5naH//Jz14gHshwcYIWClNekdbLVJTmoX4rC9Fywfc+wHRZJsEGM8A==",
+      "type": "package",
+      "path": "iracingsdk/1.0.0.43",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "iracingsdk.1.0.0.43.nupkg.sha512",
+        "iracingsdk.nuspec",
+        "lib/net40-client/iRacingSDK.dll",
+        "lib/net40-client/iRacingSDK.pdb"
+      ]
+    },
+    "YamlDotNet/11.2.1": {
+      "sha512": "tBt8K+korVfrjH9wyDEhiLKxbs8qoLCLIFwvYgkSUuMC9//w3z0cFQ8LQAI/5MCKq+BMil0cfRTRvPeE7eXhQw==",
+      "type": "package",
+      "path": "yamldotnet/11.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "images/yamldotnet.png",
+        "lib/net20/YamlDotNet.dll",
+        "lib/net20/YamlDotNet.xml",
+        "lib/net35-client/YamlDotNet.dll",
+        "lib/net35-client/YamlDotNet.xml",
+        "lib/net35/YamlDotNet.dll",
+        "lib/net35/YamlDotNet.xml",
+        "lib/net45/YamlDotNet.dll",
+        "lib/net45/YamlDotNet.xml",
+        "lib/netstandard1.3/YamlDotNet.dll",
+        "lib/netstandard1.3/YamlDotNet.xml",
+        "lib/netstandard2.1/YamlDotNet.dll",
+        "lib/netstandard2.1/YamlDotNet.xml",
+        "yamldotnet.11.2.1.nupkg.sha512",
+        "yamldotnet.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "YamlDotNet >= 11.2.1",
+      "iRacingSDK >= 1.0.0.43"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ddema\\.nuget\\packages\\": {},
@@ -15,11 +79,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Git\\GitRepos\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj",
+      "projectUniqueName": "D:\\Git\\GitRepos\\iRacingThumbnails\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj",
       "projectName": "iRacingPaintGraphic",
-      "projectPath": "D:\\Git\\GitRepos\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj",
+      "projectPath": "D:\\Git\\GitRepos\\iRacingThumbnails\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj",
       "packagesPath": "C:\\Users\\ddema\\.nuget\\packages\\",
-      "outputPath": "D:\\Git\\GitRepos\\iRacingPaintGraphic\\iRacingPaintGraphic\\obj\\",
+      "outputPath": "D:\\Git\\GitRepos\\iRacingThumbnails\\iRacingPaintGraphic\\iRacingPaintGraphic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -52,6 +116,16 @@
     "frameworks": {
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "YamlDotNet": {
+            "target": "Package",
+            "version": "[11.2.1, )"
+          },
+          "iRacingSDK": {
+            "target": "Package",
+            "version": "[1.0.0.43, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -73,5 +147,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'iRacingSDK 1.0.0.43' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "iRacingSDK",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

@@ -41,6 +41,7 @@ namespace iRacingPaintGraphic
             this.PaintFileButton = new System.Windows.Forms.Button();
             this.SaveFileButton = new System.Windows.Forms.Button();
             this.folderBrowserDialog2 = new System.Windows.Forms.FolderBrowserDialog();
+            this.chkMerge = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // RunButton
@@ -142,11 +143,22 @@ namespace iRacingPaintGraphic
             // 
             this.folderBrowserDialog2.HelpRequest += new System.EventHandler(this.folderBrowserDialog2_HelpRequest);
             // 
+            // chkMerge
+            // 
+            this.chkMerge.AutoSize = true;
+            this.chkMerge.Location = new System.Drawing.Point(19, 56);
+            this.chkMerge.Name = "chkMerge";
+            this.chkMerge.Size = new System.Drawing.Size(106, 19);
+            this.chkMerge.TabIndex = 10;
+            this.chkMerge.Text = "Merge Images?";
+            this.chkMerge.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 217);
+            this.Controls.Add(this.chkMerge);
             this.Controls.Add(this.SaveFileButton);
             this.Controls.Add(this.PaintFileButton);
             this.Controls.Add(this.CarDropDown);
@@ -161,6 +173,8 @@ namespace iRacingPaintGraphic
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
+
+
 
         }
 
@@ -178,6 +192,7 @@ namespace iRacingPaintGraphic
         private System.Windows.Forms.Button PaintFileButton;
         private System.Windows.Forms.Button SaveFileButton;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog2;
+        private System.Windows.Forms.CheckBox chkMerge;
     }
 }
 

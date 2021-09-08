@@ -5,7 +5,42 @@
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "iRacingSDK/1.0.0.43": {
+        "dependencies": {
+          "YamlDotNet": "11.2.1"
+        },
+        "runtime": {
+          "lib/net40-client/iRacingSDK.dll": {
+            "assemblyVersion": "1.0.0.43",
+            "fileVersion": "1.0.0.43"
+          }
+        }
+      },
+      "YamlDotNet/11.2.1": {
+        "runtime": {
+          "lib/netstandard2.1/YamlDotNet.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.2.1.0"
+          }
+        }
+      }
+    }
   },
-  "libraries": {}
+  "libraries": {
+    "iRacingSDK/1.0.0.43": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GqLebHI8oX3r4KATY659U+XQ/qFGk5Lf5naH//Jz14gHshwcYIWClNekdbLVJTmoX4rC9Fywfc+wHRZJsEGM8A==",
+      "path": "iracingsdk/1.0.0.43",
+      "hashPath": "iracingsdk.1.0.0.43.nupkg.sha512"
+    },
+    "YamlDotNet/11.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tBt8K+korVfrjH9wyDEhiLKxbs8qoLCLIFwvYgkSUuMC9//w3z0cFQ8LQAI/5MCKq+BMil0cfRTRvPeE7eXhQw==",
+      "path": "yamldotnet/11.2.1",
+      "hashPath": "yamldotnet.11.2.1.nupkg.sha512"
+    }
+  }
 }

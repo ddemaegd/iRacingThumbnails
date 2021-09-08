@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git\\GitRepos\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj": {}
+    "D:\\Git\\GitRepos\\iRacingThumbnails\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj": {}
   },
   "projects": {
-    "D:\\Git\\GitRepos\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj": {
+    "D:\\Git\\GitRepos\\iRacingThumbnails\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git\\GitRepos\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj",
+        "projectUniqueName": "D:\\Git\\GitRepos\\iRacingThumbnails\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj",
         "projectName": "iRacingPaintGraphic",
-        "projectPath": "D:\\Git\\GitRepos\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj",
+        "projectPath": "D:\\Git\\GitRepos\\iRacingThumbnails\\iRacingPaintGraphic\\iRacingPaintGraphic\\iRacingPaintGraphic.csproj",
         "packagesPath": "C:\\Users\\ddema\\.nuget\\packages\\",
-        "outputPath": "D:\\Git\\GitRepos\\iRacingPaintGraphic\\iRacingPaintGraphic\\obj\\",
+        "outputPath": "D:\\Git\\GitRepos\\iRacingThumbnails\\iRacingPaintGraphic\\iRacingPaintGraphic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -44,6 +44,16 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "YamlDotNet": {
+              "target": "Package",
+              "version": "[11.2.1, )"
+            },
+            "iRacingSDK": {
+              "target": "Package",
+              "version": "[1.0.0.43, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
