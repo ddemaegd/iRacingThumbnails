@@ -17,7 +17,7 @@ Examples:
 
 ![image](https://user-images.githubusercontent.com/23225874/161888826-1115918d-c924-4115-b385-51f8c7c288eb.png)
 
-![image](https://user-images.githubusercontent.com/23225874/161888850-4ddb8340-01b7-4577-ae66-70af22e1f891.png)
+![image](https://user-images.githubusercontent.com/23225874/161890823-b0016350-617d-4bde-84e7-df0fd11c3fe6.png)
 
 ![image](https://user-images.githubusercontent.com/23225874/161888869-c2f34a7d-d2cc-4791-adcd-8b40f1fda24f.png)
 
