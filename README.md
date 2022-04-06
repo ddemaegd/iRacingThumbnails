@@ -1,6 +1,6 @@
 # iRacingThumbnails
 
-Racing spotter guides take a long time to create. Typically about 2 hours to get proper images and format everything correctly. This tool will do all of the heavy lifting with 2 minutes.
+Racing spotter guides take a long time to create. Typically about 2 hours to get proper images and format everything correctly. This tool will do all of the heavy lifting within 2 minutes.
 
 The iRacing Thumbnails project is a program meant to automatically create spotter guides like one shown here: http://tiny.cc/formulaindy.
 
