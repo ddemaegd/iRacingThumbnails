@@ -42,11 +42,13 @@ namespace iRacingPaintGraphic
             this.SaveFileButton = new System.Windows.Forms.Button();
             this.folderBrowserDialog2 = new System.Windows.Forms.FolderBrowserDialog();
             this.chkMerge = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtColumns = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // RunButton
             // 
-            this.RunButton.Location = new System.Drawing.Point(624, 98);
+            this.RunButton.Location = new System.Drawing.Point(548, 85);
             this.RunButton.Name = "RunButton";
             this.RunButton.Size = new System.Drawing.Size(101, 40);
             this.RunButton.TabIndex = 0;
@@ -58,10 +60,11 @@ namespace iRacingPaintGraphic
             // 
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMessage.Location = new System.Drawing.Point(624, 169);
+            this.lblMessage.Location = new System.Drawing.Point(428, 86);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(0, 30);
             this.lblMessage.TabIndex = 1;
+            this.lblMessage.Click += new System.EventHandler(this.lblMessage_Click);
             // 
             // folderBrowserDialog1
             // 
@@ -69,7 +72,7 @@ namespace iRacingPaintGraphic
             // 
             // PaintFileTextBox
             // 
-            this.PaintFileTextBox.Location = new System.Drawing.Point(502, 11);
+            this.PaintFileTextBox.Location = new System.Drawing.Point(199, 64);
             this.PaintFileTextBox.Name = "PaintFileTextBox";
             this.PaintFileTextBox.Size = new System.Drawing.Size(181, 23);
             this.PaintFileTextBox.TabIndex = 2;
@@ -78,7 +81,7 @@ namespace iRacingPaintGraphic
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(322, 9);
+            this.label1.Location = new System.Drawing.Point(19, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 25);
             this.label1.TabIndex = 3;
@@ -88,7 +91,7 @@ namespace iRacingPaintGraphic
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(322, 49);
+            this.label2.Location = new System.Drawing.Point(19, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 25);
             this.label2.TabIndex = 4;
@@ -96,7 +99,7 @@ namespace iRacingPaintGraphic
             // 
             // SaveFileTextBox
             // 
-            this.SaveFileTextBox.Location = new System.Drawing.Point(502, 49);
+            this.SaveFileTextBox.Location = new System.Drawing.Point(199, 102);
             this.SaveFileTextBox.Name = "SaveFileTextBox";
             this.SaveFileTextBox.Size = new System.Drawing.Size(181, 23);
             this.SaveFileTextBox.TabIndex = 5;
@@ -116,12 +119,12 @@ namespace iRacingPaintGraphic
             this.CarDropDown.FormattingEnabled = true;
             this.CarDropDown.Location = new System.Drawing.Point(73, 13);
             this.CarDropDown.Name = "CarDropDown";
-            this.CarDropDown.Size = new System.Drawing.Size(240, 23);
+            this.CarDropDown.Size = new System.Drawing.Size(349, 23);
             this.CarDropDown.TabIndex = 7;
             // 
             // PaintFileButton
             // 
-            this.PaintFileButton.Location = new System.Drawing.Point(689, 11);
+            this.PaintFileButton.Location = new System.Drawing.Point(386, 64);
             this.PaintFileButton.Name = "PaintFileButton";
             this.PaintFileButton.Size = new System.Drawing.Size(36, 23);
             this.PaintFileButton.TabIndex = 8;
@@ -131,7 +134,7 @@ namespace iRacingPaintGraphic
             // 
             // SaveFileButton
             // 
-            this.SaveFileButton.Location = new System.Drawing.Point(689, 49);
+            this.SaveFileButton.Location = new System.Drawing.Point(386, 102);
             this.SaveFileButton.Name = "SaveFileButton";
             this.SaveFileButton.Size = new System.Drawing.Size(36, 23);
             this.SaveFileButton.TabIndex = 9;
@@ -146,18 +149,38 @@ namespace iRacingPaintGraphic
             // chkMerge
             // 
             this.chkMerge.AutoSize = true;
-            this.chkMerge.Location = new System.Drawing.Point(19, 56);
+            this.chkMerge.Location = new System.Drawing.Point(487, 12);
             this.chkMerge.Name = "chkMerge";
-            this.chkMerge.Size = new System.Drawing.Size(106, 19);
+            this.chkMerge.Size = new System.Drawing.Size(140, 19);
             this.chkMerge.TabIndex = 10;
-            this.chkMerge.Text = "Merge Images?";
+            this.chkMerge.Text = "Create Spotter Guide?";
             this.chkMerge.UseVisualStyleBackColor = true;
+            this.chkMerge.CheckedChanged += new System.EventHandler(this.chkMerge_CheckedChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(486, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 25);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Columns:";
+            // 
+            // txtColumns
+            // 
+            this.txtColumns.Location = new System.Drawing.Point(582, 37);
+            this.txtColumns.Name = "txtColumns";
+            this.txtColumns.Size = new System.Drawing.Size(67, 23);
+            this.txtColumns.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 217);
+            this.ClientSize = new System.Drawing.Size(706, 180);
+            this.Controls.Add(this.txtColumns);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.chkMerge);
             this.Controls.Add(this.SaveFileButton);
             this.Controls.Add(this.PaintFileButton);
@@ -173,8 +196,6 @@ namespace iRacingPaintGraphic
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
-
-
 
         }
 
@@ -193,6 +214,8 @@ namespace iRacingPaintGraphic
         private System.Windows.Forms.Button SaveFileButton;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog2;
         private System.Windows.Forms.CheckBox chkMerge;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtColumns;
     }
 }
 
